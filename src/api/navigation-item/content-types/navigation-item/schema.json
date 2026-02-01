@@ -11,22 +11,20 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "url": {
-      "type": "string"
-    },
-    "order": {
-      "type": "integer"
-    },
-    "visible": {
-      "type": "boolean"
-    },
     "navigation_item": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::navigation-item.navigation-item",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isLogo"
+            },
+            false
+          ]
+        }
+      },
       "inversedBy": "navigation_items"
     },
     "navigation_items": {
@@ -35,8 +33,106 @@
       "target": "api::navigation-item.navigation-item",
       "mappedBy": "navigation_item"
     },
-    "isChild": {
+    "title": {
+      "type": "string"
+    },
+    "isLogo": {
       "type": "boolean"
+    },
+    "order": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isLogo"
+            },
+            false
+          ]
+        }
+      }
+    },
+    "url": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isLogo"
+            },
+            false
+          ]
+        }
+      }
+    },
+    "visible": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isLogo"
+            },
+            false
+          ]
+        }
+      }
+    },
+    "isChild": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isLogo"
+            },
+            false
+          ]
+        }
+      }
+    },
+    "logoUrl": {
+      "type": "media",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isLogo"
+            },
+            true
+          ]
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "footer": {
+      "type": "blocks",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isLogo"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "phone": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isLogo"
+            },
+            true
+          ]
+        }
+      }
     }
   }
 }
