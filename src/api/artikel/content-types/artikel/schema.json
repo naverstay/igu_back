@@ -42,9 +42,6 @@
     "content": {
       "type": "blocks"
     },
-    "jsonHTML": {
-      "type": "json"
-    },
     "textHTML": {
       "type": "text"
     }
