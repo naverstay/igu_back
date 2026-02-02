@@ -40,10 +40,34 @@
       "type": "string"
     },
     "content": {
-      "type": "blocks"
+      "type": "blocks",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "useTextHTML"
+            },
+            false
+          ]
+        }
+      }
     },
     "textHTML": {
-      "type": "text"
+      "type": "text",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "useTextHTML"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "useTextHTML": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
