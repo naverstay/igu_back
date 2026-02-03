@@ -37,7 +37,8 @@
       "type": "string"
     },
     "isLogo": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "order": {
       "type": "integer",

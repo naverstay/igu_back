@@ -521,7 +521,7 @@ export interface ApiNavigationItemNavigationItem
       Schema.Attribute.Private;
     footer: Schema.Attribute.Blocks;
     isChild: Schema.Attribute.Boolean;
-    isLogo: Schema.Attribute.Boolean;
+    isLogo: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
