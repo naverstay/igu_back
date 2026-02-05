@@ -40,34 +40,17 @@
       "type": "string"
     },
     "content": {
-      "type": "blocks",
-      "conditions": {
-        "visible": {
-          "==": [
-            {
-              "var": "useTextHTML"
-            },
-            false
-          ]
-        }
-      }
+      "type": "dynamiczone",
+      "components": [
+        "shared.content-block",
+        "shared.gallery-block"
+      ]
     },
-    "textHTML": {
-      "type": "text",
-      "conditions": {
-        "visible": {
-          "==": [
-            {
-              "var": "useTextHTML"
-            },
-            true
-          ]
-        }
-      }
-    },
-    "useTextHTML": {
-      "type": "boolean",
-      "default": true
+    "gallery_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gallery-item.gallery-item",
+      "inversedBy": "artikels"
     }
   }
 }
