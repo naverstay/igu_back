@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_colored_texts",
+  "info": {
+    "displayName": "CloredText",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "blocks"
+    },
+    "bold": {
+      "type": "boolean",
+      "default": false
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "gray",
+        "black",
+        "rgba(60,35,155,1)",
+        "rgba(61,61,61,1)"
+      ]
+    }
+  },
+  "config": {}
+}

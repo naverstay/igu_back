@@ -318,6 +318,7 @@ async function run() {
   //await importMedia();
 
   await clearCollection("artikels");
+  await clearCollection("gallery-items");
   await clearCollection("navigation-items");
 
   await importCollection("artikels");

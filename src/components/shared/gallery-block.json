@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_gallery_blocks",
+  "info": {
+    "displayName": "GalleryBlock",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "galleryId": {
+      "type": "string"
+    },
+    "swiperOptions": {
+      "type": "json"
+    },
+    "gallery_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gallery-item.gallery-item"
+    },
+    "fullScreen": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_shared_content_blocks",
+  "info": {
+    "displayName": "ContentBlock",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "useTextHTML": {
+      "type": "boolean",
+      "default": true
+    },
+    "textHTML": {
+      "type": "text",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "useTextHTML"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "content": {
+      "type": "blocks",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "useTextHTML"
+            },
+            false
+          ]
+        }
+      }
+    },
+    "artikels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::artikel.artikel"
+    }
+  },
+  "config": {}
+}

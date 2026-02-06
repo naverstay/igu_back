@@ -99,6 +99,7 @@ async function exportMediaFiles() {
 
 async function run() {
   await exportCollection("artikels");
+  await exportCollection("gallery-items");
   await exportCollection("navigation-items");
 
   await exportMediaMetadata();
